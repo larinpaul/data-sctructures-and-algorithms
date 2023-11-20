@@ -1,0 +1,15 @@
+Example - Brackets:
+
+Let S be a stack
+For bracket in bracket_string:
+	
+	rev = getReversedBracket(bracket)
+	
+	If isLeftBracket(bracket):
+		S.push(bracket)
+		
+	Else If S.isEmpty() or S.pop() != rev:
+		return false // Invalid
+		
+return S.isEmpty() // Valid if S is empty
+
