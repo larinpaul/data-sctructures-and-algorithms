@@ -1,0 +1,14 @@
+// Queue Example - BFS
+
+Let Q be a Queue
+Q.enqueue(starting_node)
+starting_node.visited = true
+
+While Q is not empty Do
+	
+	node = Q.dequeue()
+	
+	For neighbour in neighbours(node):
+		If neighbour has not been visited:
+			neighbour.visited = true
+			Q.enqueue(neighbour)
