@@ -1,0 +1,32 @@
+//// 2023/11/27 // 17:15 //
+
+//// Preorder, Inorder & PostOrder
+// There three types of traversals are
+// naturally defined recursively:
+
+//// Pre-order traversal
+// preorder prints before the recursive calls
+preorder(node):
+	if node == null: return 
+	print(node.value)
+	preorder(node.left)
+	preorder(node.right)
+
+
+//// In-order traversal
+// inorder prints between the recusirve calls
+inorder(node):
+	if node == null: return
+	inorder(node.left)
+	print(node.value)
+	inorder(node.right)
+	
+	
+//// Post-order traversal
+// postorder prints after the recursive calls
+postorder(node):
+	if node == null: return
+	postorder(node.left)
+	postorder(node.right)
+	print(node.value)
+
