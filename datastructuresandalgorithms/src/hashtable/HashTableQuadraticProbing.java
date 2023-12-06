@@ -42,7 +42,7 @@ public class HashTableQuadraticProbing <K, V> implements Iterable <K> {
 	private static final double DEFAULT_LOAD_FACTOR = 0.45;
 	
 	public HashTableQuadraticProbing() {
-		this(DEFAUL_CAPACITY, DEFAULT_LOAD_FACTOR);
+		this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
 	}
 	
 	public HashTableQuadraticProbing(int capacity) {
@@ -95,16 +95,7 @@ public class HashTableQuadraticProbing <K, V> implements Iterable <K> {
 		modificationCount++;
 	}
 	
-	// Clears all the contents of the hash-table
-	public void clear() {
-		for (int i = 0; i < capacity; i++) {
-			keyTable[i] = null;
-			valueTable[i] = null;
-		}
-		keyCount = usedBuckets = 0;
-		modificationCount++;
-	}
-	
+
 	// Returns the number of keys currently inside the hash-table
 	public int size() { return keyCount; }
 	
